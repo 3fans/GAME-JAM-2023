@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsnxsgba6ms8m"]
+
+[ext_resource type="Script" path="res://start_menu.gd" id="1_834nu"]
+[ext_resource type="AudioStream" uid="uid://dcys52kydhlrp" path="res://Game Jam/First_Track.mp3" id="2_k7qck"]
+
+[node name="Start Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_834nu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_k7qck")
+autoplay = true
+
+[connection signal="button_up" from="VBoxContainer/Start" to="." method="_on_start_button_up"]
+[connection signal="button_up" from="VBoxContainer/Options" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="VBoxContainer/Quit" to="." method="_on_quit_button_up"]

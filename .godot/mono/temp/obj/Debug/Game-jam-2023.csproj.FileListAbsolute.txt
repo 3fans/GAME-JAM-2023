@@ -1,0 +1,17 @@
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\bin\Debug\Game-jam-2023.deps.json
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\bin\Debug\Game-jam-2023.runtimeconfig.json
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\bin\Debug\Game-jam-2023.dll
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\bin\Debug\Game-jam-2023.pdb
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.csproj.AssemblyReference.cache
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.AssemblyInfoInputs.cache
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.AssemblyInfo.cs
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.csproj.CoreCompileInputs.cache
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.csproj.CopyComplete
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.dll
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\refint\Game-jam-2023.dll
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.pdb
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\Game-jam-2023.genruntimeconfig.cache
+C:\Users\alex4\Documents\GAME-JAM-2023\.godot\mono\temp\obj\Debug\ref\Game-jam-2023.dll

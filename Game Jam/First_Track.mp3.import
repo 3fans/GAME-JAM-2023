@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcys52kydhlrp"
+path="res://.godot/imported/First_Track.mp3-fafb0b8151dad4bebdf4c2622bc66985.mp3str"
+
+[deps]
+
+source_file="res://Game Jam/First_Track.mp3"
+dest_files=["res://.godot/imported/First_Track.mp3-fafb0b8151dad4bebdf4c2622bc66985.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
