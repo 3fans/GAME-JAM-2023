@@ -1,18 +1,140 @@
-[gd_scene load_steps=4 format=3 uid="uid://dw5shtt1vv21p"]
+[gd_scene load_steps=19 format=3 uid="uid://dw5shtt1vv21p"]
 
 [ext_resource type="Script" path="res://playerv1.cs" id="1_eqmam"]
-[ext_resource type="Texture2D" uid="uid://csa4x5miiyd7w" path="res://icon.svg" id="1_xfj2e"]
+[ext_resource type="Texture2D" uid="uid://b0ck3yri8jwvq" path="res://Player/Sprite-0005.png" id="2_fjq8q"]
+[ext_resource type="Texture2D" uid="uid://c8nl474kx7mi5" path="res://Player/Sprite-0003 (1).png" id="3_q42bm"]
+[ext_resource type="Texture2D" uid="uid://b4l2kbi400omi" path="res://Player/Sprite-0002 (1).png" id="4_btnhd"]
+[ext_resource type="Texture2D" uid="uid://bio61wqyu4wem" path="res://Player/Sprite-0004.png" id="5_xcwf6"]
+[ext_resource type="Script" path="res://timer_display.gd" id="6_w05mm"]
+[ext_resource type="Script" path="res://sword right.gd" id="7_ow86q"]
+[ext_resource type="Script" path="res://sword left.gd" id="8_iljtn"]
+[ext_resource type="Script" path="res://sword up.gd" id="9_1xw5c"]
+[ext_resource type="Script" path="res://sword down.gd" id="10_nsyuf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vj37d"]
+size = Vector2(18, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7cj38"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fjq8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fjq8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fjq8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fjq8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fjq8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fjq8q")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q42bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q42bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q42bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q42bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q42bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q42bm")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_btnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_btnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_btnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_btnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_btnhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_btnhd")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xcwf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xcwf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xcwf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xcwf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xcwf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xcwf6")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wjii"]
+size = Vector2(20, 36)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ehpeg"]
+outline_color = Color(0.309804, 0.478431, 0.823529, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f7gv7"]
+radius = 177.003
+
+[sub_resource type="GDScript" id="GDScript_mp2l3"]
+script/source = "extends Node2D
+
+
+func _on_playerv_1_attack(attack_direction):
+	print(attack_direction)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naqf7"]
+size = Vector2(15, 31.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utgcd"]
+size = Vector2(40, 18)
 
 [node name="playerv1" type="CharacterBody2D"]
 collision_mask = 19
 script = ExtResource("1_eqmam")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-8.9407e-08, 0)
-scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("1_xfj2e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vj37d")
@@ -20,3 +142,80 @@ shape = SubResource("RectangleShape2D_vj37d")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="Move" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7cj38")
+animation = &"down"
+
+[node name="general_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="general_area"]
+shape = SubResource("RectangleShape2D_3wjii")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -46.0
+offset_top = -97.0
+offset_right = 46.0
+offset_bottom = -71.0
+text = "Placeholder"
+label_settings = SubResource("LabelSettings_ehpeg")
+horizontal_alignment = 1
+script = ExtResource("6_w05mm")
+
+[node name="Area2D" type="Area2D" parent="Label"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Area2D"]
+position = Vector2(47, 99)
+shape = SubResource("CircleShape2D_f7gv7")
+
+[node name="sword_hitboxes" type="Node2D" parent="."]
+script = SubResource("GDScript_mp2l3")
+
+[node name="sword right" type="Area2D" parent="sword_hitboxes"]
+collision_mask = 257
+monitoring = false
+monitorable = false
+script = ExtResource("7_ow86q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword_hitboxes/sword right"]
+position = Vector2(24.5, -0.5)
+shape = SubResource("RectangleShape2D_naqf7")
+
+[node name="sword left" type="Area2D" parent="sword_hitboxes"]
+collision_mask = 257
+monitoring = false
+monitorable = false
+script = ExtResource("8_iljtn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword_hitboxes/sword left"]
+position = Vector2(-25, 0)
+shape = SubResource("RectangleShape2D_naqf7")
+
+[node name="sword up" type="Area2D" parent="sword_hitboxes"]
+collision_mask = 257
+monitoring = false
+monitorable = false
+script = ExtResource("9_1xw5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword_hitboxes/sword up"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_utgcd")
+
+[node name="sword down" type="Area2D" parent="sword_hitboxes"]
+collision_mask = 257
+monitoring = false
+monitorable = false
+script = ExtResource("10_nsyuf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword_hitboxes/sword down"]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_utgcd")
+
+[connection signal="Attack" from="." to="sword_hitboxes/sword right" method="_on_playerv_1_attack"]
+[connection signal="Attack" from="." to="sword_hitboxes/sword left" method="_on_playerv_1_attack"]
+[connection signal="Attack" from="." to="sword_hitboxes/sword up" method="_on_playerv_1_attack"]
+[connection signal="Attack" from="." to="sword_hitboxes/sword down" method="_on_playerv_1_attack"]
+[connection signal="Damage" from="." to="Label" method="_on_playerv_1_damage"]
+[connection signal="body_entered" from="general_area" to="." method="_on_area_2d_body_entered"]
+[connection signal="timer_depleted" from="Label" to="." method="_on_label_timer_depleted"]
+[connection signal="body_entered" from="Label/Area2D" to="Label" method="_on_area_2d_body_entered"]

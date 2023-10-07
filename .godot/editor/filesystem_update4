@@ -1,7 +1,14 @@
-res://enemy.tscn
-res://enemy.gd
-res://start_menu.tscn
 res://playerv1.tscn
-res://lobby.tscn
+res://timer_display.gd
+res://start_menu.tscn
 res://lvl_1.tscn
+res://enemy.tscn
+res://lobby.tscn
 res://Enemy/enemy.gd
+res://playerv1.cs
+res://sword_hitboxes.gd
+res://sword right.gd
+res://sword left.gd
+res://sword up.gd
+res://sword down.gd
+res://start_menu.gd

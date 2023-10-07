@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://blsumkwwombly"]
+[gd_scene load_steps=7 format=3 uid="uid://blsumkwwombly"]
 
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_ag2sl"]
 [ext_resource type="Texture2D" uid="uid://csa4x5miiyd7w" path="res://icon.svg" id="2_h5tj6"]
@@ -9,8 +9,10 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bqjrd"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dn1kc"]
+
 [node name="enemy" type="CharacterBody2D"]
-collision_mask = 3
+collision_mask = 11
 motion_mode = 1
 script = ExtResource("1_ag2sl")
 
@@ -43,5 +45,11 @@ sprite_frames = SubResource("SpriteFrames_bqjrd")
 scale = Vector2(0.133734, 0.110813)
 texture = ExtResource("2_h5tj6")
 
+[node name="hit_box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box"]
+shape = SubResource("CircleShape2D_dn1kc")
+
 [connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
 [connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
+[connection signal="area_entered" from="hit_box" to="." method="_on_hit_box_area_entered"]

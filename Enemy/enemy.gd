@@ -1,14 +1,16 @@
 extends CharacterBody2D
-
+var health : int = 2;
 var targeted_entity = null;
 var direction
-var speed : int = 15
+var speed : int = 20
 var state = "wander";
 var wander_state = "idle"
 var rotation_timer = 0;
 var idle_timer = 0;
 var move_timer = 0;
 var rotation_rand = 1;
+var damage_time;
+var target_position;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -20,6 +22,7 @@ func _process(delta):
 		velocity = (Vector2(sin(rotation),(-1) * cos(rotation)) * speed)
 		move_and_slide()
 	if state == "wander":
+		
 		if (wander_state == "moving") and (move_timer <= 0):
 			rotation_timer = (randf()*2)+1
 			wander_state = "rotating"
@@ -41,12 +44,13 @@ func _process(delta):
 			move_and_slide()
 		else:
 			print("error else")
-			
-		
-		var rotate_time = randf() * 2
-		
 		rotate(deg_to_rad(15) * delta)
-
+	if state == "damage" && damage_time > 0:
+		velocity = velocity.lerp(target_position, .1)
+		move_and_slide()
+	elif state == "damage" && damage_time <= 0:
+		state = "chase"
+		
 func _on_vision_body_exited(body):
 	if body.get_collision_mask_value(5):
 		if targeted_entity == body:
@@ -59,5 +63,19 @@ func _on_alert_body_entered(body):
 		if targeted_entity == null:
 			targeted_entity = body
 			state = "chase"
+		
 			
+
+
+
+func _on_hit_box_area_entered(area):
+	if area.get_collision_mask_value(9):
+		health -= 1;
+		state = "damage"
+		damage_time = .3
+		target_position = (position - area.global_position)
+		velocity = target_position * speed;
+	if health <= 0:
+		#death animation
+		queue_free()
 
