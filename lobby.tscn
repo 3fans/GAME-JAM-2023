@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b76cxydm57j62"]
+[gd_scene load_steps=7 format=3 uid="uid://baaslgee380j0"]
 
 [ext_resource type="Texture2D" uid="uid://cgpfsogwh036s" path="res://Game Jam/New Piskel.png" id="1_e6twb"]
 [ext_resource type="Script" path="res://lobby.gd" id="1_ikred"]

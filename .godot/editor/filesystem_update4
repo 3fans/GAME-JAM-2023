@@ -4,3 +4,4 @@ res://start_menu.tscn
 res://playerv1.tscn
 res://lobby.tscn
 res://lvl_1.tscn
+res://Enemy/enemy.gd
