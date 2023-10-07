@@ -14,10 +14,8 @@ func _process(delta):
 func _on_start_button_up():
 	get_tree().change_scene_to_file("res://lobby.tscn");
 
-
 func _on_options_button_up():
-	var options;
-
+	pass
 
 func _on_quit_button_up():
-	pass # Replace with function body.
+	get_tree().quit();

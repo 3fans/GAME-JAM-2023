@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://blsumkwwombly"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_0wg0v"]
+[ext_resource type="Texture2D" uid="uid://csa4x5miiyd7w" path="res://icon.svg" id="1_l6xn8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3k1d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddfmm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bqjrd"]
+
+[node name="enemy" type="CharacterBody2D"]
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_0wg0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g3k1d")
+
+[node name="alert" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="alert"]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_ddfmm")
+
+[node name="vision" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vision"]
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_ddfmm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -0.0134498
+sprite_frames = SubResource("SpriteFrames_bqjrd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.133734, 0.110813)
+texture = ExtResource("1_l6xn8")
+
+[connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
+[connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
