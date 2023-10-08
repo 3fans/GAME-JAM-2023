@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3k1d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ddfmm"]
+radius = 21.8754
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bqjrd"]
 
@@ -34,7 +35,7 @@ collision_mask = 3
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vision"]
-scale = Vector2(10, 10)
+scale = Vector2(8, 8)
 shape = SubResource("CircleShape2D_ddfmm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

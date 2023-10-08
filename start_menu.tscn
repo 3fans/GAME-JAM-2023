@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsnxsgba6ms8m"]
+[gd_scene load_steps=3 format=3 uid="uid://bsnxsgba6ms8m"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_834nu"]
+[ext_resource type="Texture2D" uid="uid://dwa0xehju03cr" path="res://Game Jam/title_screen.png" id="2_mfjtm"]
 
 [node name="Start Menu" type="Control"]
 layout_mode = 3
@@ -9,25 +10,31 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_834nu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(572, 335)
+texture = ExtResource("2_mfjtm")
 
-[node name="Start" type="Button" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 33.0
+offset_right = 382.0
+offset_bottom = 73.0
+scale = Vector2(3.80537, 2.96937)
+
+[node name="Start" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Start"
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Options"
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Quit" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[connection signal="button_up" from="VBoxContainer/Start" to="." method="_on_start_button_up"]
-[connection signal="button_up" from="VBoxContainer/Options" to="." method="_on_options_button_up"]
-[connection signal="button_up" from="VBoxContainer/Quit" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="HBoxContainer/Start" to="." method="_on_start_button_up"]
+[connection signal="button_up" from="HBoxContainer/Options" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="HBoxContainer/Quit" to="." method="_on_quit_button_up"]

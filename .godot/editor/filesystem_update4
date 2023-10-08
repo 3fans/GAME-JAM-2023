@@ -12,3 +12,22 @@ res://sword left.gd
 res://sword up.gd
 res://sword down.gd
 res://start_menu.gd
+res://Maps/pro_gen_lvl_1.tscn
+res://Maps/test_map_1.tscn
+res://Maps/test_tile_set.tres
+res://Maps/test_map_2.tscn
+res://Maps/pro_gen_lvl_1.cs
+res://Maps/test_map_1.gd
+res://Maps/test_map_2.gd
+res://Maps/sand_tiles.tres
+res://attack right frames.gd
+res://attack left frames.gd
+res://attack down frames.gd
+res://attack up frames.gd
+res://Maps/new_sand_tiles.tres
+res://Maps/SAFE_sand_tiles.tres
+res://lobby.gd
+res://Global.gd
+res://Maps/sand_man_shop.tscn
+res://Maps/sand_man_shop.gd
+res://global handler.gd

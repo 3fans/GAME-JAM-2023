@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx4jw2r2ajluc"]
+
+[ext_resource type="Script" path="res://Maps/sand_man_shop.gd" id="1_0pekf"]
+[ext_resource type="PackedScene" uid="uid://dw5shtt1vv21p" path="res://playerv1.tscn" id="1_mm4v2"]
+
+[node name="sand_man_shop" type="Node2D"]
+script = ExtResource("1_0pekf")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.13841, 1.01047)
+
+[node name="Sand" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Buying time!!!?!?! (buy time here)"
+
+[node name="Buy Dash" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Buy Dash"
+
+[node name="Reduce Dash Time" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Reduce Dash Time"
+
+[node name="Back To Lobby" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Back To Lobby"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="playerv1" parent="." instance=ExtResource("1_mm4v2")]
+process_mode = 4
+visible = false
+position = Vector2(165, 111)
+scale = Vector2(2.56, 2.12)
+
+[connection signal="button_up" from="Control/VBoxContainer/Sand" to="." method="_on_sand_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Buy Dash" to="." method="_on_buy_dash_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Reduce Dash Time" to="." method="_on_reduce_dash_time_button_up"]
+[connection signal="button_up" from="Control/VBoxContainer/Back To Lobby" to="." method="_on_back_to_lobby_button_up"]

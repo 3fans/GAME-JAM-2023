@@ -1,16 +1,21 @@
 using Godot;
 using System;
+using System.Security.AccessControl;
 
 public partial class playerv1 : CharacterBody2D
 {
-	public const float Speed = 100.0f;
-	private AnimatedSprite2D move;
+	public const float Speed = 120.0f;
+	private AnimationPlayer move;
 
 
 	private Vector2 target_position;
 	private float damage_time = 0;
 
 	private string state = "moving";
+    private bool is_dashing = false;
+    private bool can_dash = false;
+    private float dash_timer = 0;
+    private float dash_time = .7f;
 
 	private float attack_timer = 0;
 
@@ -20,9 +25,12 @@ public partial class playerv1 : CharacterBody2D
 
 	[Signal] public delegate string AttackEventHandler(string attack_direction);
 
+    [Signal] public delegate void MovingEventHandler();
+    
     public override void _Ready()
     {
-		move = GetNode<AnimatedSprite2D>("Move");
+        base._Ready();
+		move = GetNode<AnimationPlayer>("Move");
     }
     public override void _PhysicsProcess(double delta)
 	{
@@ -36,6 +44,7 @@ public partial class playerv1 : CharacterBody2D
 			if(attack_timer == .3f)
 			{
 				EmitSignal(SignalName.Attack, directionCheck());
+                attack_Animation(public_direction);
 			}
 			if(attack_timer > 0)
 			{
@@ -50,7 +59,22 @@ public partial class playerv1 : CharacterBody2D
 		{
             Vector2 velocity = Velocity;
             Vector2 direction = Input.GetVector("left", "right", "up", "down");
-            if (direction != Vector2.Zero)
+            if (Input.IsActionJustPressed("dash") && !is_dashing && can_dash)
+            {
+                dash_timer = dash_time;
+                is_dashing = true;
+                velocity = (direction * Speed * 5);
+            }
+            else if (is_dashing && dash_timer > 0)
+            {
+                dash_timer -= (float)delta;
+                velocity = velocity * .9f;
+            }
+            else if (is_dashing && dash_timer <= 0)
+            {
+                is_dashing = false;
+            }
+            else if (direction != Vector2.Zero && !is_dashing)
             {
                 velocity = direction * Speed;
                 moveAnimation(direction);
@@ -60,7 +84,7 @@ public partial class playerv1 : CharacterBody2D
             {
                 velocity = Vector2.Zero;
             }
-			
+            EmitSignal("Moving");
             Velocity = velocity;
             MoveAndSlide();
         }
@@ -101,7 +125,29 @@ public partial class playerv1 : CharacterBody2D
 			}
 		}
     }
-	private void _on_area_2d_body_entered(CharacterBody2D body)
+    private void attack_Animation(Vector2 direction)
+    {
+        if (direction.X > 0)
+        {
+            move.Play("attack_right");
+        }
+        else if (direction.X < 0)
+        {
+            move.Play("attack_left");
+        }
+        else
+        {
+            if (direction.Y < 0)
+            {
+                move.Play("attack_up");
+            }
+            else if (direction.Y > 0)
+            {
+                move.Play("attack_down");
+            }
+        }
+    }
+    private void _on_area_2d_body_entered(CharacterBody2D body)
 	{
 		if (body.GetCollisionMaskValue(4))
 		{
@@ -121,35 +167,12 @@ public partial class playerv1 : CharacterBody2D
 	{
         if (public_direction.X > 0)
         {
-            if (public_direction.Y < 0)
-            {
-                return "up_right";
-               
-            }
-            else if (public_direction.Y == 0)
-            {
-                return "right";
-            }
-            else
-            {
-
-                return "down_right";
-            }
+			return "right";
         }
         else if (public_direction.X < 0)
         {
-            if (public_direction.Y < 0)
-            {
-                return "up_left";
-            }
-            else if (public_direction.Y == 0)
-            {
-                return "left";
-            }
-            else
-            {
-                return "down_left";
-            }
+            return "left";
+
         }
         else
         {
@@ -162,6 +185,11 @@ public partial class playerv1 : CharacterBody2D
                 return "down";
             }
         }
+    }
+    private void _on_global_handler_on_load(bool global_can_dash, float global_dash_time)
+    {
+        can_dash = global_can_dash;
+        dash_time = global_dash_time;
     }
 }
 
