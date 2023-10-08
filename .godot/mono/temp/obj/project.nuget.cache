@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "jV1Cf/dxO0mOE+5Lsg9dBX8upOf916IelHaaOAQpbT/zLpN+kZ+ssSAw16piUQDgNQo4gMYNGDCN4o254CKTvg==",
+  "dgSpecHash": "liEXBVHJO8V9zu74xev7QVD01GROmS+56pFufM+GUGi4iKiizkHPjbiHV3ooBoGzDlVBsBzbE+dQ3+SgY5L6bA==",
   "success": true,
   "projectFilePath": "C:\\Users\\alex4\\Documents\\GAME-JAM-2023\\Game-jam-2023.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alex4\\.nuget\\packages\\godot.sourcegenerators\\4.1.2\\godot.sourcegenerators.4.1.2.nupkg.sha512",
     "C:\\Users\\alex4\\.nuget\\packages\\godotsharp\\4.1.2\\godotsharp.4.1.2.nupkg.sha512",
-    "C:\\Users\\alex4\\.nuget\\packages\\godotsharpeditor\\4.1.2\\godotsharpeditor.4.1.2.nupkg.sha512"
+    "C:\\Users\\alex4\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.22\\microsoft.netcore.app.runtime.win-x64.6.0.22.nupkg.sha512",
+    "C:\\Users\\alex4\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.22\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.22.nupkg.sha512",
+    "C:\\Users\\alex4\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.22\\microsoft.aspnetcore.app.runtime.win-x64.6.0.22.nupkg.sha512"
   ],
   "logs": []
 }

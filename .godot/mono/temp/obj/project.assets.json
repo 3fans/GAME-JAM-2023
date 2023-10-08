@@ -20,19 +20,24 @@
             "related": ".xml"
           }
         }
-      },
-      "GodotSharpEditor/4.1.2": {
+      }
+    },
+    "net6.0/win-x64": {
+      "Godot.SourceGenerators/4.1.2": {
         "type": "package",
-        "dependencies": {
-          "GodotSharp": "4.1.2"
-        },
+        "build": {
+          "build/Godot.SourceGenerators.props": {}
+        }
+      },
+      "GodotSharp/4.1.2": {
+        "type": "package",
         "compile": {
-          "lib/net6.0/GodotSharpEditor.dll": {
+          "lib/net6.0/GodotSharp.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/GodotSharpEditor.dll": {
+          "lib/net6.0/GodotSharp.dll": {
             "related": ".xml"
           }
         }
@@ -65,26 +70,12 @@
         "lib/net6.0/GodotSharp.dll",
         "lib/net6.0/GodotSharp.xml"
       ]
-    },
-    "GodotSharpEditor/4.1.2": {
-      "sha512": "L8toPAj+YzsHVtR7JEKC11//oBEVoB91kVY49kjCkVuqTLSsg8NKPaYE+54YRyI2g9lqSES9xX5bQ/6yT9rOWA==",
-      "type": "package",
-      "path": "godotsharpeditor/4.1.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "godotsharpeditor.4.1.2.nupkg.sha512",
-        "godotsharpeditor.nuspec",
-        "lib/net6.0/GodotSharpEditor.dll",
-        "lib/net6.0/GodotSharpEditor.xml"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Godot.SourceGenerators >= 4.1.2",
-      "GodotSharp >= 4.1.2",
-      "GodotSharpEditor >= 4.1.2"
+      "GodotSharp >= 4.1.2"
     ]
   },
   "packageFolders": {
@@ -94,11 +85,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\USERS\\ALEX4\\DOCUMENTS\\GAME-JAM-2023\\Game-jam-2023.csproj",
+      "projectUniqueName": "C:\\Users\\alex4\\Documents\\GAME-JAM-2023\\Game-jam-2023.csproj",
       "projectName": "Game-jam-2023",
-      "projectPath": "C:\\USERS\\ALEX4\\DOCUMENTS\\GAME-JAM-2023\\Game-jam-2023.csproj",
+      "projectPath": "C:\\Users\\alex4\\Documents\\GAME-JAM-2023\\Game-jam-2023.csproj",
       "packagesPath": "C:\\Users\\alex4\\.nuget\\packages\\",
-      "outputPath": "C:\\USERS\\ALEX4\\DOCUMENTS\\GAME-JAM-2023\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "C:\\Users\\alex4\\Documents\\GAME-JAM-2023\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -139,10 +130,6 @@
           "GodotSharp": {
             "target": "Package",
             "version": "[4.1.2, )"
-          },
-          "GodotSharpEditor": {
-            "target": "Package",
-            "version": "[4.1.2, )"
           }
         },
         "imports": [
@@ -156,12 +143,31 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[6.0.22, 6.0.22]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[6.0.22, 6.0.22]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[6.0.22, 6.0.22]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

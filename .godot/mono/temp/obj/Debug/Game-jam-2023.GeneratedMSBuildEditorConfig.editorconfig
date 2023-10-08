@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = C:\Users\alex4\Documents\GAME-JAM-2023\
+build_property.GodotProjectDir = C:\USERS\ALEX4\DOCUMENTS\GAME-JAM-2023\
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -13,4 +13,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Gamejam2023
-build_property.ProjectDir = C:\Users\alex4\Documents\GAME-JAM-2023\
+build_property.ProjectDir = C:\USERS\ALEX4\DOCUMENTS\GAME-JAM-2023\
