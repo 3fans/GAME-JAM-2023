@@ -27,6 +27,6 @@ func _on_back_to_lobby_button_up():
 
 
 func _on_reduce_dash_time_button_up():
-	if Global.dash_time >= .5 and Global.sandwich >= 5:
+	if Global.dash_time >= .4 and Global.sandwich >= 4:
 		Global.dash_time -= .1
 		Global.sandwich -= 4

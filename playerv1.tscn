@@ -33,10 +33,10 @@ func _on_playerv_1_attack(attack_direction):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_naqf7"]
-size = Vector2(19.5, 48)
+size = Vector2(31.75, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utgcd"]
-size = Vector2(44, 18)
+size = Vector2(60, 28)
 
 [sub_resource type="Animation" id="Animation_25gyo"]
 length = 0.001
@@ -341,7 +341,7 @@ monitorable = false
 script = ExtResource("7_ow86q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword_hitboxes/sword right"]
-position = Vector2(20, 0)
+position = Vector2(26.125, 0.5)
 shape = SubResource("RectangleShape2D_naqf7")
 
 [node name="sword left" type="Area2D" parent="sword_hitboxes"]
@@ -361,7 +361,7 @@ monitorable = false
 script = ExtResource("9_1xw5c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword_hitboxes/sword up"]
-position = Vector2(0, -27)
+position = Vector2(0, -30)
 shape = SubResource("RectangleShape2D_utgcd")
 
 [node name="sword down" type="Area2D" parent="sword_hitboxes"]
@@ -372,7 +372,7 @@ script = ExtResource("10_nsyuf")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword_hitboxes/sword down"]
-position = Vector2(0, 27)
+position = Vector2(0, 30)
 shape = SubResource("RectangleShape2D_utgcd")
 
 [node name="Move" type="AnimationPlayer" parent="."]

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var health : int = 3
+var health : int = 2
 var speed : int = 40
 var targeted_entity = null;
 var direction

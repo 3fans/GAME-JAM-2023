@@ -28,11 +28,11 @@ script = ExtResource("5_o8inx")
 [node name="test_map_3" parent="." instance=ExtResource("7_2lboj")]
 script = ExtResource("8_tg7g5")
 
-[node name="playerv1" parent="." instance=ExtResource("6_i37cs")]
-position = Vector2(58, 598)
-
 [node name="final_map" parent="." instance=ExtResource("10_4erm5")]
 position = Vector2(3456, 0)
+
+[node name="playerv1" parent="." instance=ExtResource("6_i37cs")]
+position = Vector2(58, 598)
 
 [connection signal="MapsPositions" from="." to="test_map_1" method="_on_pro_gen_lvl_1_maps_positions"]
 [connection signal="MapsPositions" from="." to="test_map_2" method="_on_pro_gen_lvl_1_maps_positions"]

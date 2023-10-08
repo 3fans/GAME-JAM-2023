@@ -34,7 +34,7 @@ text = "Buy Dash (20 sandwiches)"
 
 [node name="Reduce Dash Time" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "Reduce Dash Time (8 sandwhich = -0.1 sec)"
+text = "Reduce Dash Time (4 sandwhich = -0.1 sec)"
 
 [node name="Back To Lobby" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
