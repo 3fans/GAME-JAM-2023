@@ -46,8 +46,9 @@ func _process(delta):
 			print("error else")
 		rotate(deg_to_rad(15) * delta)
 	if state == "damage" && damage_time > 0:
-		velocity = velocity.lerp(target_position, .1)
+		velocity = velocity.lerp(target_position, .2)
 		move_and_slide()
+		damage_time -= delta
 	elif state == "damage" && damage_time <= 0:
 		state = "chase"
 		
@@ -63,8 +64,6 @@ func _on_alert_body_entered(body):
 		if targeted_entity == null:
 			targeted_entity = body
 			state = "chase"
-		
-			
 
 
 
@@ -76,6 +75,6 @@ func _on_hit_box_area_entered(area):
 		target_position = (position - area.global_position)
 		velocity = target_position * speed;
 	if health <= 0:
-		#death animation
+		Global.sandwich += 1
 		queue_free()
 

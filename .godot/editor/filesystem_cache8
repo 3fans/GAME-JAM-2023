@@ -1,15 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696704389
-enemy.tscn::PackedScene::3196893092904681106::1696697593::0::1::::<><>::res://Enemy/enemy.gd<>uid://csa4x5miiyd7w::::res://icon.svg
+::res://::1696789010
+attack down frames.gd::GDScript::-1::1696775294::0::1::::<>Sprite2D<>::
+attack left frames.gd::GDScript::-1::1696775294::0::1::::<>Sprite2D<>::
+attack right frames.gd::GDScript::-1::1696775294::0::1::::<>Sprite2D<>::
+attack up frames.gd::GDScript::-1::1696775229::0::1::::<>Sprite2D<>::
+enemy.tscn::PackedScene::3196893092904681106::1696788542::0::1::::<><>::res://Enemy/enemy.gd<>uid://csa4x5miiyd7w::::res://icon.svg
+global handler.gd::GDScript::-1::1696788536::0::1::::<>Node<>::
+Global.gd::GDScript::-1::1696788193::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::6038044013534104354::1696631689::1696631701::1::::<><>::
-lobby.gd::GDScript::-1::1696633128::0::1::::<>Node2D<>::
-lobby.tscn::PackedScene::2387533554835655159::1696697593::0::1::::<><>::uid://cgpfsogwh036s::::res://Game Jam/New Piskel.png<>res://lobby.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn
-lvl_1.tscn::PackedScene::2362556077740361464::1696697593::0::1::::<><>::uid://cgpfsogwh036s::::res://Game Jam/New Piskel.png<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>uid://blsumkwwombly::::res://enemy.tscn
-playerv1.cs::CSharpScript::-1::1696696336::0::1::::<><>::
-playerv1.tscn::PackedScene::8766454378670117735::1696697593::0::1::::<><>::res://playerv1.cs<>uid://b0ck3yri8jwvq::::res://Player/Sprite-0005.png<>uid://c8nl474kx7mi5::::res://Player/Sprite-0003 (1).png<>uid://b4l2kbi400omi::::res://Player/Sprite-0002 (1).png<>uid://bio61wqyu4wem::::res://Player/Sprite-0004.png<>uid://cnjw8wn77f05i::::res://addons/health_bar_2d/resources/health_bar_texture.png<>res://addons/health_bar_2d/health_bar_2d.gd
+lobby.gd::GDScript::-1::1696787446::0::1::::<>Node2D<>::
+lobby.tscn::PackedScene::2387533554835655159::1696788542::0::1::::<><>::res://lobby.gd<>uid://dwqru883tvfnr::::res://Aseprite/Tile Map-sheet.png<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>uid://cvysw2gmcghjw::::res://Game Jam/test_transparent-removebg-preview.png
+lvl_1.tscn::PackedScene::2362556077740361464::1696777885::0::1::::<><>::uid://cgpfsogwh036s::::res://Game Jam/New Piskel.png<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>uid://blsumkwwombly::::res://enemy.tscn
+playerv1.cs::CSharpScript::-1::1696788479::0::1::::<><>::
+playerv1.tscn::PackedScene::8766454378670117735::1696788542::0::1::::<><>::res://playerv1.cs<>res://timer_display.gd<>uid://b3yr8fojqfn5j::::res://Aseprite/MainCharectorAttackRight.png<>res://sword right.gd<>res://attack right frames.gd<>res://sword left.gd<>uid://bctaol3w24ojd::::res://Aseprite/MainCharectorAttackLeftt.png<>res://sword up.gd<>uid://bvuh650fq8wn0::::res://Aseprite/MainCharectorAttackDown.png<>res://attack left frames.gd<>uid://ytusukobxxcx::::res://Aseprite/MainCharectorAttackUp.png<>res://sword down.gd<>uid://bo7lbk4u5felv::::res://Aseprite/MainCharector.png<>res://attack down frames.gd<>res://attack up frames.gd<>res://Sprite2D.gd<>res://global handler.gd
 readme.md::TextFile::-1::1696693194::0::1::::<><>::
-start_menu.gd::GDScript::-1::1696641093::0::1::::<>Control<>::
-start_menu.tscn::PackedScene::3678085731831203142::1696697592::0::1::::<><>::res://start_menu.gd
+Sprite2D.gd::GDScript::-1::1696774754::0::1::::<>Sprite2D<>::
+start_menu.gd::GDScript::-1::1696777033::0::1::::<>Control<>::
+start_menu.tscn::PackedScene::3678085731831203142::1696788542::0::1::::<><>::res://start_menu.gd<>uid://dwa0xehju03cr::::res://Game Jam/title_screen.png
+sword down.gd::GDScript::-1::1696713661::0::1::::<>Area2D<>::
+sword left.gd::GDScript::-1::1696713661::0::1::::<>Area2D<>::
+sword right.gd::GDScript::-1::1696713641::0::1::::<>Area2D<>::
+sword up.gd::GDScript::-1::1696713661::0::1::::<>Area2D<>::
+timer_display.gd::GDScript::-1::1696782510::0::1::::<>Label<>::
 ::res://addons/::1696696936
 ::res://addons/finite_state_machine/::1696693192
 plugin.cfg::TextFile::-1::1696693192::0::1::::<><>::
@@ -40,8 +52,16 @@ turrent.gd::GDScript::-1::1696696937::0::1::::<>Area2D<>::
 turrent.tscn::PackedScene::4679830886535347318::1696696938::0::1::::<><>::res://addons/health_bar_2d/examples/turrent.gd<>res://addons/health_bar_2d/examples/bullet.tscn
 ::res://addons/health_bar_2d/resources/::1696696938
 health_bar_texture.png::CompressedTexture2D::5705271616599968208::1696696938::1696696938::1::::<><>::
-::res://Enemy/::1696693754
-enemy.gd::GDScript::-1::1696693754::0::1::::<>CharacterBody2D<>::
+::res://Aseprite/::1696775568
+MainCharector.png::CompressedTexture2D::3435794826451632867::1696729765::1696729778::1::::<><>::
+MainCharectorAttackDown.png::CompressedTexture2D::3902155948303889811::1696772601::1696772609::1::::<><>::
+MainCharectorAttackLeftt.png::CompressedTexture2D::2566047171459162053::1696772601::1696772609::1::::<><>::
+MainCharectorAttackRight.png::CompressedTexture2D::4402344776405859201::1696772601::1696772609::1::::<><>::
+MainCharectorAttackUp.png::CompressedTexture2D::1725002975338940351::1696772601::1696772609::1::::<><>::
+Tile Map-sheet.png::CompressedTexture2D::8737516345483614199::1696775565::1696775568::1::::<><>::
+Tile Map.png::CompressedTexture2D::4360867009320875475::1696729765::1696729778::1::::<><>::
+::res://Enemy/::1696782552
+enemy.gd::GDScript::-1::1696782552::0::1::::<>CharacterBody2D<>::
 ::res://example/::1696693194
 ::res://example/scenes/::1696693193
 example_character.gd::GDScript::-1::1696693193::0::1::::<>CharacterBody2D<>::
@@ -55,12 +75,28 @@ run_state.gd::GDScript::-1::1696693194::0::1::::RunState<>BaseState<>::
 walk_state.gd::GDScript::-1::1696693754::0::1::::WalkState<>BaseState<>::
 ::res://example/sprites/::1696693194
 arrow.png::CompressedTexture2D::4915009977334487032::1696693194::1696693194::1::::<><>::
-::res://Game Jam/::1696632103
+::res://Game Jam/::1696789010
 First_Track.mp3::AudioStreamMP3::7350332718812991461::1696632103::1696632103::1::::<><>::
+Flame.png::CompressedTexture2D::2936339475179414315::1696789001::1696789011::1::::<><>::
+lego-yoda-death-sound-effect.mp3::AudioStreamMP3::4069086568915222463::1696778451::1696778465::1::::<><>::
 New Piskel.png::CompressedTexture2D::5225276570385091736::1696632103::1696632103::1::::<><>::
 player.png::CompressedTexture2D::8456051784844837775::1696632103::1696632103::1::::<><>::
 simpleTileset.png::CompressedTexture2D::1701991687302002131::1696632103::1696632103::1::::<><>::
 slime.png::CompressedTexture2D::3112345880346505949::1696632103::1696632103::1::::<><>::
+test_transparent-removebg-preview.png::CompressedTexture2D::6297485771165443252::1696781615::1696781615::1::::<><>::
+title_screen.png::CompressedTexture2D::8704975830538681901::1696732078::1696732082::1::::<><>::
+::res://Maps/::1696788542
+new_sand_tiles.tres::TileSet::2060612311222324839::1696776112::0::1::::<><>::uid://dwqru883tvfnr::::res://Aseprite/Tile Map-sheet.png
+pro_gen_lvl_1.cs::CSharpScript::-1::1696729760::0::1::::<><>::
+pro_gen_lvl_1.tscn::PackedScene::3441529399129222177::1696788542::0::1::::<><>::res://Maps/pro_gen_lvl_1.cs<>uid://bws1iw5yf7pr7::::res://Maps/test_map_1.tscn<>uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>res://Maps/test_map_1.gd<>uid://dgnwpnumc3wwa::::res://Maps/test_map_2.tscn<>res://Maps/test_map_2.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn
+sand_man_shop.gd::GDScript::-1::1696788355::0::1::::<>Node2D<>::
+sand_man_shop.tscn::PackedScene::6447638911948738878::1696788542::0::1::::<><>::res://Maps/sand_man_shop.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn
+sand_tiles.tres::TileSet::3694360034655996519::1696730174::0::1::::<><>::uid://b3eo3v7ejr00f::::res://Aseprite/Tile Map.png
+test_map_1.gd::GDScript::-1::1696729527::0::1::::<>Node2D<>::
+test_map_1.tscn::PackedScene::3969328174422299886::1696788542::0::1::::<><>::uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://blsumkwwombly::::res://enemy.tscn
+test_map_2.gd::GDScript::-1::1696729527::0::1::::<>Node2D<>::
+test_map_2.tscn::PackedScene::7608595298708374852::1696788542::0::1::::<><>::uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://blsumkwwombly::::res://enemy.tscn
+test_tile_set.tres::TileSet::4752897822037214240::1696725647::0::1::::<><>::uid://cgpfsogwh036s::::res://Game Jam/New Piskel.png
 ::res://Player/::1696695008
 Sprite-0002 (1).png::CompressedTexture2D::4446262587468261584::1696694999::1696695008::1::::<><>::
 Sprite-0003 (1).png::CompressedTexture2D::7116631519220615502::1696694999::1696695008::1::::<><>::

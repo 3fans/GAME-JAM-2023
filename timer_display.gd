@@ -2,10 +2,10 @@ extends Label
 
 signal timer_depleted
 
-var player_time : float = 100
+var player_time : float = Global.start_time
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	text = str(int(player_time))
 	
 
 
@@ -19,10 +19,8 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.get_visibility_layer_bit(6):
-		visible = false
 		set_process(false)
 	else:
-		visible = true
 		set_process(true)
 
 
