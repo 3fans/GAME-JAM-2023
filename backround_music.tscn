@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://38ngo2cx5p84"]
+
+[ext_resource type="AudioStream" uid="uid://dalcxdo2ois4" path="res://Game Jam/415806__sunsai__desert-background-music.wav" id="1_wsf6d"]
+[ext_resource type="Script" path="res://backround_music_player.gd" id="2_lvm7p"]
+
+[node name="backround_music" type="Node"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_wsf6d")
+script = ExtResource("2_lvm7p")
