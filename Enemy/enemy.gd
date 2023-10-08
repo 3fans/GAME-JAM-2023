@@ -1,8 +1,8 @@
 extends CharacterBody2D
-var health : int = 2;
+var health : int = 2
+var speed : int = 20
 var targeted_entity = null;
 var direction
-var speed : int = 20
 var state = "wander";
 var wander_state = "idle"
 var rotation_timer = 0;
@@ -11,9 +11,10 @@ var move_timer = 0;
 var rotation_rand = 1;
 var damage_time;
 var target_position;
+var animate;
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	animate = $spider_anim
 
 # Called every frame. 'delta' is the elapsed time sinace the previous frame.
 func _process(delta):
@@ -22,7 +23,7 @@ func _process(delta):
 		velocity = (Vector2(sin(rotation),(-1) * cos(rotation)) * speed)
 		move_and_slide()
 	if state == "wander":
-		
+		animate.play("move")
 		if (wander_state == "moving") and (move_timer <= 0):
 			rotation_timer = (randf()*2)+1
 			wander_state = "rotating"

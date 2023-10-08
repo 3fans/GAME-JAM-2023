@@ -1,27 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696789010
+::res://::1696802549
 attack down frames.gd::GDScript::-1::1696775294::0::1::::<>Sprite2D<>::
 attack left frames.gd::GDScript::-1::1696775294::0::1::::<>Sprite2D<>::
 attack right frames.gd::GDScript::-1::1696775294::0::1::::<>Sprite2D<>::
 attack up frames.gd::GDScript::-1::1696775229::0::1::::<>Sprite2D<>::
-enemy.tscn::PackedScene::3196893092904681106::1696788542::0::1::::<><>::res://Enemy/enemy.gd<>uid://csa4x5miiyd7w::::res://icon.svg
+enemy.tscn::PackedScene::3196893092904681106::1696800257::0::1::::<><>::res://Enemy/enemy.gd<>uid://csa4x5miiyd7w::::res://icon.svg
 global handler.gd::GDScript::-1::1696788536::0::1::::<>Node<>::
-Global.gd::GDScript::-1::1696788193::0::1::::<>Node<>::
+Global.gd::GDScript::-1::1696801626::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::6038044013534104354::1696631689::1696631701::1::::<><>::
 lobby.gd::GDScript::-1::1696787446::0::1::::<>Node2D<>::
-lobby.tscn::PackedScene::2387533554835655159::1696788542::0::1::::<><>::res://lobby.gd<>uid://dwqru883tvfnr::::res://Aseprite/Tile Map-sheet.png<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>uid://cvysw2gmcghjw::::res://Game Jam/test_transparent-removebg-preview.png
-lvl_1.tscn::PackedScene::2362556077740361464::1696777885::0::1::::<><>::uid://cgpfsogwh036s::::res://Game Jam/New Piskel.png<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>uid://blsumkwwombly::::res://enemy.tscn
+lobby.tscn::PackedScene::2387533554835655159::1696802549::0::1::::<><>::res://lobby.gd<>uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>uid://cvysw2gmcghjw::::res://Game Jam/test_transparent-removebg-preview.png
+lvl_1.tscn::PackedScene::2362556077740361464::1696777885::0::1::::<><>::uid://cgpfsogwh036s
 playerv1.cs::CSharpScript::-1::1696788479::0::1::::<><>::
-playerv1.tscn::PackedScene::8766454378670117735::1696788542::0::1::::<><>::res://playerv1.cs<>res://timer_display.gd<>uid://b3yr8fojqfn5j::::res://Aseprite/MainCharectorAttackRight.png<>res://sword right.gd<>res://attack right frames.gd<>res://sword left.gd<>uid://bctaol3w24ojd::::res://Aseprite/MainCharectorAttackLeftt.png<>res://sword up.gd<>uid://bvuh650fq8wn0::::res://Aseprite/MainCharectorAttackDown.png<>res://attack left frames.gd<>uid://ytusukobxxcx::::res://Aseprite/MainCharectorAttackUp.png<>res://sword down.gd<>uid://bo7lbk4u5felv::::res://Aseprite/MainCharector.png<>res://attack down frames.gd<>res://attack up frames.gd<>res://Sprite2D.gd<>res://global handler.gd
+playerv1.tscn::PackedScene::8766454378670117735::1696802511::0::1::::<><>::res://playerv1.cs<>res://timer_display.gd<>uid://b3yr8fojqfn5j::::res://Aseprite/MainCharectorAttackRight.png<>res://sword right.gd<>res://attack right frames.gd<>res://sword left.gd<>uid://bctaol3w24ojd::::res://Aseprite/MainCharectorAttackLeftt.png<>res://sword up.gd<>uid://bvuh650fq8wn0::::res://Aseprite/MainCharectorAttackDown.png<>res://attack left frames.gd<>uid://ytusukobxxcx::::res://Aseprite/MainCharectorAttackUp.png<>res://sword down.gd<>uid://bo7lbk4u5felv::::res://Aseprite/MainCharector.png<>res://attack down frames.gd<>res://attack up frames.gd<>res://Sprite2D.gd<>res://global handler.gd<>uid://bg2qmitpbsisw::::res://Aseprite/Sandwich.png<>res://sandwich_display.gd
 readme.md::TextFile::-1::1696693194::0::1::::<><>::
+sandwich_display.gd::GDScript::-1::1696798902::0::1::::<>Label<>::
 Sprite2D.gd::GDScript::-1::1696774754::0::1::::<>Sprite2D<>::
 start_menu.gd::GDScript::-1::1696777033::0::1::::<>Control<>::
-start_menu.tscn::PackedScene::3678085731831203142::1696788542::0::1::::<><>::res://start_menu.gd<>uid://dwa0xehju03cr::::res://Game Jam/title_screen.png
-sword down.gd::GDScript::-1::1696713661::0::1::::<>Area2D<>::
+start_menu.tscn::PackedScene::3678085731831203142::1696800257::0::1::::<><>::res://start_menu.gd<>uid://dwa0xehju03cr::::res://Game Jam/title_screen.png
+sword down.gd::GDScript::-1::1696791911::0::1::::<>Area2D<>::
 sword left.gd::GDScript::-1::1696713661::0::1::::<>Area2D<>::
 sword right.gd::GDScript::-1::1696713641::0::1::::<>Area2D<>::
 sword up.gd::GDScript::-1::1696713661::0::1::::<>Area2D<>::
-timer_display.gd::GDScript::-1::1696782510::0::1::::<>Label<>::
+test_map_3.gd::GDScript::-1::1696800051::0::1::::<>Node2D<>::
+test_map_3.tscn::PackedScene::954654263872430597::1696802511::0::1::::<><>::uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://co2gd1wicb47h::::res://Enemy/snake.tscn<>uid://cqb3g83x16teq::::res://Enemy/spider.tscn
+timer_display.gd::GDScript::-1::1696798768::0::1::::<>Label<>::
 ::res://addons/::1696696936
 ::res://addons/finite_state_machine/::1696693192
 plugin.cfg::TextFile::-1::1696693192::0::1::::<><>::
@@ -52,16 +55,27 @@ turrent.gd::GDScript::-1::1696696937::0::1::::<>Area2D<>::
 turrent.tscn::PackedScene::4679830886535347318::1696696938::0::1::::<><>::res://addons/health_bar_2d/examples/turrent.gd<>res://addons/health_bar_2d/examples/bullet.tscn
 ::res://addons/health_bar_2d/resources/::1696696938
 health_bar_texture.png::CompressedTexture2D::5705271616599968208::1696696938::1696696938::1::::<><>::
-::res://Aseprite/::1696775568
+::res://Aseprite/::1696802570
 MainCharector.png::CompressedTexture2D::3435794826451632867::1696729765::1696729778::1::::<><>::
 MainCharectorAttackDown.png::CompressedTexture2D::3902155948303889811::1696772601::1696772609::1::::<><>::
 MainCharectorAttackLeftt.png::CompressedTexture2D::2566047171459162053::1696772601::1696772609::1::::<><>::
 MainCharectorAttackRight.png::CompressedTexture2D::4402344776405859201::1696772601::1696772609::1::::<><>::
 MainCharectorAttackUp.png::CompressedTexture2D::1725002975338940351::1696772601::1696772609::1::::<><>::
+MainCharectorFinal.png::CompressedTexture2D::6413051797060516181::1696802570::1696802636::1::::<><>::
+MainCharectorHurt.png::CompressedTexture2D::2759870877206359097::1696789786::1696789791::1::::<><>::
+Sandwich.png::CompressedTexture2D::2864285296513701594::1696789786::1696789791::1::::<><>::
 Tile Map-sheet.png::CompressedTexture2D::8737516345483614199::1696775565::1696775568::1::::<><>::
 Tile Map.png::CompressedTexture2D::4360867009320875475::1696729765::1696729778::1::::<><>::
-::res://Enemy/::1696782552
-enemy.gd::GDScript::-1::1696782552::0::1::::<>CharacterBody2D<>::
+::res://Enemy/::1696802511
+big_snake.gd::GDScript::-1::1696801626::0::1::::<>CharacterBody2D<>::
+big_snake.tscn::PackedScene::8332607989503326562::1696802511::0::1::::<><>::res://Enemy/big_snake.gd<>uid://sitnpo18w16h::::res://Enemy/Snake.png<>uid://bx8di5bx7t3ax::::res://Game Jam/lego-yoda-death-sound-effect.mp3
+enemy.gd::GDScript::-1::1696796396::0::1::::<>CharacterBody2D<>::
+snake.gd::GDScript::-1::1696798481::0::1::::<>CharacterBody2D<>::
+Snake.png::CompressedTexture2D::1281091856404217485::1696789786::1696794198::1::::<><>::
+snake.tscn::PackedScene::5811594436975613795::1696802511::0::1::::<><>::res://Enemy/snake.gd<>uid://sitnpo18w16h::::res://Enemy/Snake.png<>uid://bx8di5bx7t3ax::::res://Game Jam/lego-yoda-death-sound-effect.mp3
+spider.gd::GDScript::-1::1696800996::0::1::::<>CharacterBody2D<>::
+Spider.png::CompressedTexture2D::2672227371901115500::1696789786::1696794198::1::::<><>::
+spider.tscn::PackedScene::5899639811515748828::1696799097::0::1::::<><>::res://Enemy/spider.gd<>uid://becpguyu6kb6k::::res://Enemy/Spider.png<>uid://bx8di5bx7t3ax::::res://Game Jam/lego-yoda-death-sound-effect.mp3
 ::res://example/::1696693194
 ::res://example/scenes/::1696693193
 example_character.gd::GDScript::-1::1696693193::0::1::::<>CharacterBody2D<>::
@@ -75,7 +89,7 @@ run_state.gd::GDScript::-1::1696693194::0::1::::RunState<>BaseState<>::
 walk_state.gd::GDScript::-1::1696693754::0::1::::WalkState<>BaseState<>::
 ::res://example/sprites/::1696693194
 arrow.png::CompressedTexture2D::4915009977334487032::1696693194::1696693194::1::::<><>::
-::res://Game Jam/::1696789010
+::res://Game Jam/::1696789011
 First_Track.mp3::AudioStreamMP3::7350332718812991461::1696632103::1696632103::1::::<><>::
 Flame.png::CompressedTexture2D::2936339475179414315::1696789001::1696789011::1::::<><>::
 lego-yoda-death-sound-effect.mp3::AudioStreamMP3::4069086568915222463::1696778451::1696778465::1::::<><>::
@@ -85,18 +99,25 @@ simpleTileset.png::CompressedTexture2D::1701991687302002131::1696632103::1696632
 slime.png::CompressedTexture2D::3112345880346505949::1696632103::1696632103::1::::<><>::
 test_transparent-removebg-preview.png::CompressedTexture2D::6297485771165443252::1696781615::1696781615::1::::<><>::
 title_screen.png::CompressedTexture2D::8704975830538681901::1696732078::1696732082::1::::<><>::
-::res://Maps/::1696788542
-new_sand_tiles.tres::TileSet::2060612311222324839::1696776112::0::1::::<><>::uid://dwqru883tvfnr::::res://Aseprite/Tile Map-sheet.png
-pro_gen_lvl_1.cs::CSharpScript::-1::1696729760::0::1::::<><>::
-pro_gen_lvl_1.tscn::PackedScene::3441529399129222177::1696788542::0::1::::<><>::res://Maps/pro_gen_lvl_1.cs<>uid://bws1iw5yf7pr7::::res://Maps/test_map_1.tscn<>uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>res://Maps/test_map_1.gd<>uid://dgnwpnumc3wwa::::res://Maps/test_map_2.tscn<>res://Maps/test_map_2.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn
-sand_man_shop.gd::GDScript::-1::1696788355::0::1::::<>Node2D<>::
-sand_man_shop.tscn::PackedScene::6447638911948738878::1696788542::0::1::::<><>::res://Maps/sand_man_shop.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn
-sand_tiles.tres::TileSet::3694360034655996519::1696730174::0::1::::<><>::uid://b3eo3v7ejr00f::::res://Aseprite/Tile Map.png
-test_map_1.gd::GDScript::-1::1696729527::0::1::::<>Node2D<>::
-test_map_1.tscn::PackedScene::3969328174422299886::1696788542::0::1::::<><>::uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://blsumkwwombly::::res://enemy.tscn
-test_map_2.gd::GDScript::-1::1696729527::0::1::::<>Node2D<>::
-test_map_2.tscn::PackedScene::7608595298708374852::1696788542::0::1::::<><>::uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://blsumkwwombly::::res://enemy.tscn
-test_tile_set.tres::TileSet::4752897822037214240::1696725647::0::1::::<><>::uid://cgpfsogwh036s::::res://Game Jam/New Piskel.png
+::res://Maps/::1696802511
+new_sand_tiles.tres::TileSet::2060612311222324839::1696791911::0::1::::<><>::uid://dwqru883tvfnr::::res://Aseprite/Tile Map-sheet.png
+pro_gen_lvl_1.cs::CSharpScript::-1::1696800207::0::1::::<><>::
+pro_gen_lvl_1.tscn::PackedScene::3441529399129222177::1696802511::0::1::::<><>::res://Maps/pro_gen_lvl_1.cs<>uid://bws1iw5yf7pr7::::res://Maps/test_map_1.tscn<>uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>res://Maps/test_map_1.gd<>uid://dgnwpnumc3wwa::::res://Maps/test_map_2.tscn<>res://Maps/test_map_2.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>uid://nupas1wpmdg4::::res://test_map_3.tscn<>res://test_map_3.gd<>uid://7vjkitponmj4::::res://Maps/final_map.tscn
+final_map.tscn::PackedScene::2289959690365088999::1696802511::0::1::::<><>::res://Maps/final_map.gd<>uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://dqym3ovetpq63::::res://Enemy/big_snake.tscn
+final_map.gd::GDScript::-1::1696801658::0::1::::<>Node2D<>::
+final_screen.tscn::PackedScene::6806092016121267319::1696802511::0::1::::<><>::uid://dwqru883tvfnr::::res://Aseprite/Tile Map-sheet.png<>res://Maps/Label2.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn
+Label2.gd::GDScript::-1::1696801772::0::1::::<>Label<>::
+dash_time_counter.gd::GDScript::-1::1696802449::0::1::::<>Label<>::
+sandwich_counter.gd::GDScript::-1::1696789969::0::1::::<>Label<>::
+sand_man_shop.gd::GDScript::-1::1696802140::0::1::::<>Node2D<>::
+sand_man_shop.tscn::PackedScene::6447638911948738878::1696802511::0::1::::<><>::res://Maps/sand_man_shop.gd<>uid://dw5shtt1vv21p::::res://playerv1.tscn<>res://Maps/sandwich_counter.gd<>uid://bg2qmitpbsisw::::res://Aseprite/Sandwich.png<>res://Maps/Time_counter.gd<>res://Maps/dash_time_counter.gd
+sand_tiles.tres::TileSet::3694360034655996519::1696730174::0::1::::<><>::uid://b3eo3v7ejr00f
+test_map_1.gd::GDScript::-1::1696800051::0::1::::<>Node2D<>::
+test_map_1.tscn::PackedScene::3969328174422299886::1696802511::0::1::::<><>::uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://cqb3g83x16teq::::res://Enemy/spider.tscn<>uid://co2gd1wicb47h::::res://Enemy/snake.tscn
+test_map_2.gd::GDScript::-1::1696800051::0::1::::<>Node2D<>::
+test_map_2.tscn::PackedScene::7608595298708374852::1696802511::0::1::::<><>::uid://4mf8pfusx4gp::::res://Maps/new_sand_tiles.tres<>uid://cqb3g83x16teq::::res://Enemy/spider.tscn<>uid://co2gd1wicb47h::::res://Enemy/snake.tscn
+test_tile_set.tres::TileSet::4752897822037214240::1696725647::0::1::::<><>::uid://cgpfsogwh036s
+Time_counter.gd::GDScript::-1::1696790182::0::1::::<>Label<>::
 ::res://Player/::1696695008
 Sprite-0002 (1).png::CompressedTexture2D::4446262587468261584::1696694999::1696695008::1::::<><>::
 Sprite-0003 (1).png::CompressedTexture2D::7116631519220615502::1696694999::1696695008::1::::<><>::

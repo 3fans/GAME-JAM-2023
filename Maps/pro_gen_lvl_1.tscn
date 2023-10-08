@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bpbdqsjcmi4uf"]
+[gd_scene load_steps=11 format=3 uid="uid://bpbdqsjcmi4uf"]
 
 [ext_resource type="Script" path="res://Maps/pro_gen_lvl_1.cs" id="1_db1wp"]
 [ext_resource type="PackedScene" uid="uid://bws1iw5yf7pr7" path="res://Maps/test_map_1.tscn" id="2_56cli"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dgnwpnumc3wwa" path="res://Maps/test_map_2.tscn" id="3_mvyao"]
 [ext_resource type="Script" path="res://Maps/test_map_2.gd" id="5_o8inx"]
 [ext_resource type="PackedScene" uid="uid://dw5shtt1vv21p" path="res://playerv1.tscn" id="6_i37cs"]
+[ext_resource type="PackedScene" uid="uid://nupas1wpmdg4" path="res://test_map_3.tscn" id="7_2lboj"]
+[ext_resource type="Script" path="res://test_map_3.gd" id="8_tg7g5"]
+[ext_resource type="PackedScene" uid="uid://7vjkitponmj4" path="res://Maps/final_map.tscn" id="10_4erm5"]
 
 [node name="pro_gen_lvl_1" type="Node2D"]
 script = ExtResource("1_db1wp")
@@ -22,8 +25,15 @@ script = ExtResource("3_15jyf")
 [node name="test_map_2" parent="." instance=ExtResource("3_mvyao")]
 script = ExtResource("5_o8inx")
 
+[node name="test_map_3" parent="." instance=ExtResource("7_2lboj")]
+script = ExtResource("8_tg7g5")
+
 [node name="playerv1" parent="." instance=ExtResource("6_i37cs")]
 position = Vector2(58, 598)
 
+[node name="final_map" parent="." instance=ExtResource("10_4erm5")]
+position = Vector2(3456, 0)
+
 [connection signal="MapsPositions" from="." to="test_map_1" method="_on_pro_gen_lvl_1_maps_positions"]
 [connection signal="MapsPositions" from="." to="test_map_2" method="_on_pro_gen_lvl_1_maps_positions"]
+[connection signal="MapsPositions" from="." to="test_map_3" method="_on_pro_gen_lvl_1_maps_positions"]

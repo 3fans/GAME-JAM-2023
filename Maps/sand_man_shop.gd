@@ -13,11 +13,13 @@ func _process(delta):
 func _on_sand_button_up():
 	if Global.sandwich >= 1:
 		Global.sandwich -= 1
-		Global.start_time +=5
+		Global.start_time +=3
 
 
 func _on_buy_dash_button_up():
-	Global.can_dash = true
+	if Global.sandwich >= 20:
+		Global.sandwich -= 20
+		Global.can_dash = true
 
 
 func _on_back_to_lobby_button_up():
@@ -25,6 +27,6 @@ func _on_back_to_lobby_button_up():
 
 
 func _on_reduce_dash_time_button_up():
-	if Global.dash_time >= .5 and Global.sandwich >= 4:
+	if Global.dash_time >= .5 and Global.sandwich >= 5:
 		Global.dash_time -= .1
 		Global.sandwich -= 4

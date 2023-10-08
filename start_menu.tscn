@@ -10,18 +10,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_834nu")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(572, 335)
-texture = ExtResource("2_mfjtm")
-
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 216.0
 offset_top = 33.0
 offset_right = 382.0
 offset_bottom = 73.0
-scale = Vector2(3.80537, 2.96937)
+scale = Vector2(7.15269, 5.63074)
 
 [node name="Start" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -34,6 +29,12 @@ text = "Options"
 [node name="Quit" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer"]
+show_behind_parent = true
+position = Vector2(93.552, 101.705)
+scale = Vector2(0.262787, 0.336772)
+texture = ExtResource("2_mfjtm")
 
 [connection signal="button_up" from="HBoxContainer/Start" to="." method="_on_start_button_up"]
 [connection signal="button_up" from="HBoxContainer/Options" to="." method="_on_options_button_up"]

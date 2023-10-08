@@ -19,6 +19,7 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.get_visibility_layer_bit(6):
+		text = str(int(Global.start_time))
 		set_process(false)
 	else:
 		set_process(true)

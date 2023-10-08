@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx4jw2r2ajluc"]
+[gd_scene load_steps=7 format=3 uid="uid://cx4jw2r2ajluc"]
 
 [ext_resource type="Script" path="res://Maps/sand_man_shop.gd" id="1_0pekf"]
 [ext_resource type="PackedScene" uid="uid://dw5shtt1vv21p" path="res://playerv1.tscn" id="1_mm4v2"]
+[ext_resource type="Script" path="res://Maps/sandwich_counter.gd" id="2_3kgdf"]
+[ext_resource type="Texture2D" uid="uid://bg2qmitpbsisw" path="res://Aseprite/Sandwich.png" id="3_y5lwt"]
+[ext_resource type="Script" path="res://Maps/Time_counter.gd" id="4_u32iy"]
+[ext_resource type="Script" path="res://Maps/dash_time_counter.gd" id="5_s5n1a"]
 
 [node name="sand_man_shop" type="Node2D"]
 script = ExtResource("1_0pekf")
@@ -9,8 +13,10 @@ script = ExtResource("1_0pekf")
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 19.0
+offset_top = 52.0
+offset_right = 59.0
+offset_bottom = 92.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 0
@@ -20,30 +26,76 @@ scale = Vector2(1.13841, 1.01047)
 
 [node name="Sand" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "Buying time!!!?!?! (buy time here)"
+text = "Buy Time (1 sandwich for 3 total secs)"
 
 [node name="Buy Dash" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "Buy Dash"
+text = "Buy Dash (20 sandwiches)"
 
 [node name="Reduce Dash Time" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "Reduce Dash Time"
+text = "Reduce Dash Time (8 sandwhich = -0.1 sec)"
 
 [node name="Back To Lobby" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "Back To Lobby"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="playerv1" parent="." instance=ExtResource("1_mm4v2")]
 process_mode = 4
 visible = false
 position = Vector2(165, 111)
 scale = Vector2(2.56, 2.12)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 409.0
+offset_top = 58.0
+offset_right = 588.0
+offset_bottom = 144.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/HBoxContainer"]
+position = Vector2(205, 6)
+scale = Vector2(5, 5)
+texture = ExtResource("3_y5lwt")
+
+[node name="Label_lable_2" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "You have"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "0"
+script = ExtResource("2_3kgdf")
+
+[node name="Label_lable_3" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "sandwiches"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Dash time is"
+
+[node name="Time_counter" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "0"
+script = ExtResource("5_s5n1a")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_label" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Time is"
+
+[node name="Time_counter" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "0"
+script = ExtResource("4_u32iy")
 
 [connection signal="button_up" from="Control/VBoxContainer/Sand" to="." method="_on_sand_button_up"]
 [connection signal="button_up" from="Control/VBoxContainer/Buy Dash" to="." method="_on_buy_dash_button_up"]

@@ -1,33 +1,33 @@
-res://playerv1.tscn
-res://timer_display.gd
 res://start_menu.tscn
-res://lvl_1.tscn
+res://sword down.gd
+res://Maps/new_sand_tiles.tres
+res://playerv1.tscn
 res://enemy.tscn
 res://lobby.tscn
-res://Enemy/enemy.gd
-res://playerv1.cs
-res://sword_hitboxes.gd
-res://sword right.gd
-res://sword left.gd
-res://sword up.gd
-res://sword down.gd
-res://start_menu.gd
 res://Maps/pro_gen_lvl_1.tscn
 res://Maps/test_map_1.tscn
-res://Maps/test_tile_set.tres
 res://Maps/test_map_2.tscn
+res://Maps/sand_man_shop.tscn
+res://spider.tscn
+res://Enemy/spider.tscn
+res://Enemy/enemy.gd
+res://Enemy/spider.gd
+res://Enemy/snake.tscn
+res://Enemy/snake.gd
+res://Global.gd
+res://timer_display.gd
+res://sandwich_display.gd
+res://test_map_3.tscn
 res://Maps/pro_gen_lvl_1.cs
+res://playerv1.cs
+res://test_map_3.gd
 res://Maps/test_map_1.gd
 res://Maps/test_map_2.gd
-res://Maps/sand_tiles.tres
-res://attack right frames.gd
-res://attack left frames.gd
-res://attack down frames.gd
-res://attack up frames.gd
-res://Maps/new_sand_tiles.tres
-res://Maps/SAFE_sand_tiles.tres
-res://lobby.gd
-res://Global.gd
-res://Maps/sand_man_shop.tscn
+res://Enemy/big_snake.tscn
+res://Enemy/big_snake.gd
+res://Maps/final_map.tscn
+res://Maps/final_map.gd
+res://Maps/final_screen.tscn
+res://Maps/Label2.gd
 res://Maps/sand_man_shop.gd
-res://global handler.gd
+res://Maps/dash_time_counter.gd

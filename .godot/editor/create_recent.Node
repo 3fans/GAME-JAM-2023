@@ -1,5 +1,13 @@
-HBoxContainer
+TileMap
 Label
+HBoxContainer
+CollisionShape2D
+Area2D
+VBoxContainer
+Sprite2D
+AudioStreamPlayer2D
+AnimationPlayer
+AnimationTree
 GPUParticles2D
 CPUParticles2D
 Button
@@ -7,14 +15,8 @@ Node
 Camera2D
 Window
 Control
-VBoxContainer
-CollisionShape2D
 ColorRect
-Area2D
 RichTextLabel
-Sprite2D
-TileMap
-AnimationPlayer
 Node2D
 CollisionPolygon2D
 MenuBar
@@ -28,5 +30,3 @@ FiniteStateMachine
 StateMachineState
 CharacterBody2D
 VisibleOnScreenNotifier2D
-RigidBody2D
-AudioStreamPlayer2D

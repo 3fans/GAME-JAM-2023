@@ -1,0 +1,116 @@
+[gd_scene load_steps=11 format=3 uid="uid://co2gd1wicb47h"]
+
+[ext_resource type="Script" path="res://Enemy/snake.gd" id="1_vv463"]
+[ext_resource type="Texture2D" uid="uid://sitnpo18w16h" path="res://Enemy/Snake.png" id="2_4ntyr"]
+[ext_resource type="AudioStream" uid="uid://bx8di5bx7t3ax" path="res://Game Jam/lego-yoda-death-sound-effect.mp3" id="3_1it6y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3k1d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddfmm"]
+radius = 21.8754
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dn1kc"]
+
+[sub_resource type="Animation" id="Animation_1uvuu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mtkes"]
+resource_name = "damage"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
+[sub_resource type="Animation" id="Animation_b1by0"]
+resource_name = "move"
+length = 0.2
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0334, 0.0501, 0.0668, 0.0835, 0.1002, 0.1169, 0.1336, 0.1503, 0.167, 0.1837),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_16m22"]
+_data = {
+"RESET": SubResource("Animation_1uvuu"),
+"damage": SubResource("Animation_mtkes"),
+"move": SubResource("Animation_b1by0")
+}
+
+[node name="snake" type="CharacterBody2D"]
+collision_mask = 11
+motion_mode = 1
+script = ExtResource("1_vv463")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g3k1d")
+
+[node name="alert" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="alert"]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_ddfmm")
+
+[node name="vision" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vision"]
+scale = Vector2(8, 8)
+shape = SubResource("CircleShape2D_ddfmm")
+
+[node name="hit_box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box"]
+shape = SubResource("CircleShape2D_dn1kc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 1)
+scale = Vector2(1.208, 1)
+texture = ExtResource("2_4ntyr")
+hframes = 13
+
+[node name="snake_anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_16m22")
+}
+
+[node name="yoda_death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1it6y")
+
+[connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
+[connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
+[connection signal="area_entered" from="hit_box" to="." method="_on_hit_box_area_entered"]

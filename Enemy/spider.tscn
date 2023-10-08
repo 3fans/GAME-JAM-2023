@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqb3g83x16teq"]
+
+[ext_resource type="Script" path="res://Enemy/spider.gd" id="1_emo5r"]
+[ext_resource type="Texture2D" uid="uid://becpguyu6kb6k" path="res://Enemy/Spider.png" id="2_ytvrn"]
+[ext_resource type="AudioStream" uid="uid://bx8di5bx7t3ax" path="res://Game Jam/lego-yoda-death-sound-effect.mp3" id="3_lul7r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3k1d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddfmm"]
+radius = 21.8754
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dn1kc"]
+
+[sub_resource type="Animation" id="Animation_b1by0"]
+resource_name = "move"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_1uvuu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mtkes"]
+resource_name = "damage"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_16m22"]
+_data = {
+"RESET": SubResource("Animation_1uvuu"),
+"damage": SubResource("Animation_mtkes"),
+"move": SubResource("Animation_b1by0")
+}
+
+[node name="spider" type="CharacterBody2D"]
+collision_mask = 11
+motion_mode = 1
+script = ExtResource("1_emo5r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g3k1d")
+
+[node name="alert" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="alert"]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_ddfmm")
+
+[node name="vision" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vision"]
+scale = Vector2(8, 8)
+shape = SubResource("CircleShape2D_ddfmm")
+
+[node name="hit_box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box"]
+shape = SubResource("CircleShape2D_dn1kc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.208, 1)
+texture = ExtResource("2_ytvrn")
+hframes = 3
+
+[node name="spider_anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_16m22")
+}
+
+[node name="yoda_death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lul7r")
+
+[connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
+[connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
+[connection signal="area_entered" from="hit_box" to="." method="_on_hit_box_area_entered"]

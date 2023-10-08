@@ -24,8 +24,6 @@ public partial class playerv1 : CharacterBody2D
 	[Signal] public delegate void DamageEventHandler();
 
 	[Signal] public delegate string AttackEventHandler(string attack_direction);
-
-    [Signal] public delegate void MovingEventHandler();
     
     public override void _Ready()
     {
@@ -64,6 +62,8 @@ public partial class playerv1 : CharacterBody2D
                 dash_timer = dash_time;
                 is_dashing = true;
                 velocity = (direction * Speed * 5);
+                dashAnimation(direction);
+
             }
             else if (is_dashing && dash_timer > 0)
             {
@@ -84,7 +84,6 @@ public partial class playerv1 : CharacterBody2D
             {
                 velocity = Vector2.Zero;
             }
-            EmitSignal("Moving");
             Velocity = velocity;
             MoveAndSlide();
         }
@@ -124,6 +123,27 @@ public partial class playerv1 : CharacterBody2D
 				move.Play("down");
 			}
 		}
+    }	private void dashAnimation(Vector2 direction)
+	{
+		if (direction.X > 0)
+		{
+			move.Play("dash_right");
+		}
+        else if (direction.X < 0)
+        {
+            move.Play("dash_left");
+        }
+		else
+		{
+			if(direction.Y < 0)
+			{
+				move.Play("dash_up");
+			}
+			else if (direction.Y > 0)
+			{
+				move.Play("dash_down");
+			}
+		}
     }
     private void attack_Animation(Vector2 direction)
     {
@@ -156,7 +176,8 @@ public partial class playerv1 : CharacterBody2D
 			target_position = (Position - body.GlobalPosition).Normalized();
             Velocity = target_position * Speed * 2;
             damage_time = .3f;
-			//play damage animation
+            //play damage animation
+            move.Play("damage");
 		}
 	}
     private void _on_label_timer_depleted()
