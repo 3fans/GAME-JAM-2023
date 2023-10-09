@@ -175,7 +175,7 @@ public partial class playerv1 : CharacterBody2D
 			state = "damage";
 			EmitSignal("Damage");
 			target_position = (Position - body.GlobalPosition).Normalized();
-            Velocity = target_position * Speed * 2;
+            Velocity = target_position * Speed * 3;
             damage_time = .3f;
             //play damage animation
             move.Play("damage");

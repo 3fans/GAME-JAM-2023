@@ -19,8 +19,9 @@ func _ready():
 	animate = $spider_anim
 	sound = $yoda_death
 
-# Called every frame. 'delta' is the elapsed time sinace the previous frame.
-func _process(delta):
+# Called every frame. 'delta' is the elapsed time sinace the previous frame
+
+func _physics_process(delta):
 	if death_timer > 0:
 		death_timer -= delta
 	elif health <= 0:
@@ -56,7 +57,7 @@ func _process(delta):
 			print("error else")
 		rotate(deg_to_rad(15) * delta)
 	if state == "damage" && damage_time > 0:
-		velocity = velocity.lerp(target_position, .2)
+		velocity = velocity.lerp(target_position, .1)
 		move_and_slide()
 		damage_time -= delta
 	elif state == "damage" && damage_time <= 0:
@@ -83,8 +84,8 @@ func _on_hit_box_area_entered(area):
 		health -= 1;
 		state = "damage"
 		damage_time = .3
-		target_position = (position - area.global_position)
-		velocity = target_position * speed;
+		target_position = (position - area.global_position).normalized()
+		velocity = target_position * speed * 15;
 		animate.play("damage")
 	if health <= 0 and death_timer <= 0:
 		sound.play()
