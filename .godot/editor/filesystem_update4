@@ -1,3 +1,4 @@
+res://default_bus_layout.tres
 res://backround_music.tscn
 res://sword down.gd
 res://Maps/new_sand_tiles.tres
@@ -14,3 +15,5 @@ res://Maps/sand_man_shop.tscn
 res://Maps/final_screen.tscn
 res://lobby.tscn
 res://Enemy/spider.tscn
+res://Maps/pro_gen_lvl_1.cs
+res://playerv1.cs

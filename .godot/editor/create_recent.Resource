@@ -1,2 +1,3 @@
+AudioStreamWAV
 TileSet
 NoiseTexture2D

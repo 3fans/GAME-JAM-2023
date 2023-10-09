@@ -29,6 +29,7 @@ public partial class playerv1 : CharacterBody2D
     {
         base._Ready();
 		move = GetNode<AnimationPlayer>("Move");
+        move.Play("down");
     }
     public override void _PhysicsProcess(double delta)
 	{

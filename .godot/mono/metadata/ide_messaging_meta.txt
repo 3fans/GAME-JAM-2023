@@ -1,2 +1,2 @@
-﻿53280
+﻿61052
 C:/Users/alex4/Downloads/Godot_v4.1.2-stable_mono_win64/Godot_v4.1.2-stable_mono_win64/Godot_v4.1.2-stable_mono_win64.exe
